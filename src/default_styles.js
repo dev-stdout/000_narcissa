@@ -2,17 +2,16 @@ import styled, { css } from "styled-components";
 import * as _themes from "./default_styles_color";
 
 export const style_media_break = "770px";
-export const style_text_default = "Istok Web";
+export const style_text_default = "Source Code Pro";
 
 export const style_border_base = css`
 	border-style: solid;
-	border-color: ${(props) => props.theme.style_accent_color};
+	border-color: ${(props) => props.theme.style_text_color};
 `;
 
 export const style_default_border = css`
 	${style_border_base}
-	border-width: 3px;
-	border-radius: 20px;
+	border-width: 1px;
 `;
 
 export const style_default_board_shadow = css`
@@ -40,7 +39,7 @@ export const style_default_board = css`
 `;
 
 export const style_text_base = css`
-	color: ${(props) => props.theme.style_accent_color};
+	color: ${(props) => props.theme.style_text_color};
 	text-align: center;
 	font-family: ${style_text_default};
 	font-display: swap;

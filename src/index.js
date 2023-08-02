@@ -5,15 +5,12 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import WebFont from "webfontloader";
 
 import { E_page_home } from "./pages/home";
-import { E_page_team } from "./pages/team/";
-import { E_page_about } from "./pages/about";
 import { E_page_not_found } from "./pages/not_found";
-import { E_page_hidden } from "./pages/hidden";
-import { E_news } from "./news";
+import { E_bounty_page } from "./pages/bounties/bounty_template";
 
 WebFont.load({
 	google: {
-		families: ["Istok Web:400"],
+		families: ["Source Code Pro:400"],
 	},
 });
 
@@ -30,9 +27,7 @@ rootElement.render(
 				<Route path="/" element={<E_page_home />} />
 				<Route path="/home" element={<E_page_home />} />
 
-				<Route path="/team" element={<E_page_team />} />
-				<Route path="/about" element={<E_page_about />} />
-				<Route path="/news/*" element={<E_news />} />
+				<Route path="/bounty/:id" element={<E_bounty_page />} />
 
 				<Route path="/*" element={<E_page_not_found />} />
 			</Routes>

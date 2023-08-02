@@ -1,7 +1,8 @@
 export const style_cotton_candy = {
-	name: "cotton_candy",
-	style_main_color: "#e04470",
-	style_accent_color: "#ffffff",
+	name: "narcissa",
+	style_main_color: "#A9FFF0",
+	style_accent_color: "#A629FF",
+	style_text_color: "#000000",
 	style_neutral_light_color: "#cb9fb472",
 	// style_secondary_color: "#28fbff",
 	style_secondary_color: "#289bff",
@@ -12,38 +13,6 @@ export const style_cotton_candy = {
 		return `linear-gradient(158deg, ${this.style_secondary_color}c0 0%, #21d7cbc0 103%)`;
 	},
 	get style_gradient_pink() {
-		return `${this.style_main_color} radial-gradient(#ffa62145, #e591c60d)`;
-	},
-};
-
-export const style_plum = {
-	name: "plum",
-	style_main_color: "#2a044d",
-	style_accent_color: "#ffffff",
-	style_neutral_light_color: "#190522ff",
-	style_secondary_color: "#2beb78",
-	style_darker_secondary_color: "#11eaa1",
-	style_gradient_multicolor: "linear-gradient(10deg, #e00e93, #7a7df8)",
-	get style_gradient_blue() {
-		return `linear-gradient(158deg, ${this.style_secondary_color}c0 0%, #096cb3c0 103%)`;
-	},
-	get style_gradient_pink() {
-		return `${this.style_main_color} radial-gradient(#fea50025, #3b23850c)`;
-	},
-};
-
-export const style_dark = {
-	name: "dark",
-	style_main_color: "#0c0a1f",
-	style_accent_color: "#a7a7a7",
-	style_neutral_light_color: "#2f042eff",
-	style_secondary_color: "#00d9b8",
-	style_darker_secondary_color: "#30c4bf",
-	style_gradient_multicolor: "linear-gradient(#8600a8, #6869d6)",
-	get style_gradient_blue() {
-		return `linear-gradient(158deg, #183a79e5 0%, #010816e2 103%)`;
-	},
-	get style_gradient_pink() {
-		return `${this.style_main_color} radial-gradient(#4305237f, #070626af)`;
+		return `linear-gradient(#A9FFF0 0%, #FBBDFF 0%)`;
 	},
 };

@@ -1,46 +1,15 @@
 import { keyframes } from "styled-components";
 import { styled, style_default_board_shadow, style_default_border, style_text_base, style_board_title } from "../../default_styles";
-import { E_badge_new } from "../../components/comp_badge";
 
-export const E_news_card_001 = ({ index }) => {
-	return (
-		<_card index={index}>
-			<E_badge_new></E_badge_new>
-			<_card_left>
-				<_card_title>Website Unveiled!</_card_title>
-				<_card_text>We are thrilled to introduce Sugargenix, a game studio company, and welcome you to our first post out of many to come!</_card_text>
-			</_card_left>
-		</_card>
-	)
-}
-
-export const E_news_card_002 = ({ index }) => {
-	return (
-		<_card index={index}>
-			<E_badge_new></E_badge_new>
-			<_card_left>
-				<_card_title>Mympheus Log 001</_card_title>
-				<_card_text>Our first dev log where we delve into our first mobile game '<_special_text_style>Mympheus</_special_text_style>'.</_card_text>
-			</_card_left>
-		</_card>
-	)
-}
-
-export const E_news_card_003 = ({ index }) => {
-	return (
-		<_card index={index}>
-			<E_badge_new></E_badge_new>
-			<_card_left>
-				<_card_title>Hiring Pixel Artist</_card_title>
-				<_card_text>Sugargenix is looking for a part-time pixel artist to join us!</_card_text>
-			</_card_left>
-		</_card>
-	)
-}
-export const E_news_card = ({ child, href }) => {
+export const E_news_card = ({ href }) => {
 	return (
 		<a style={{textDecoration: "none"}} href={href}>
-			{child}
+			<_card>
+				<_card_left>
+					<_card_title>Website Unveiled!</_card_title>
+					<_card_text>We are thrilled to introduce Sugargenix, a game studio company, and welcome you to our first post out of many to come!</_card_text>
+				</_card_left>
+			</_card>
 		</a>
 	);
 };
@@ -94,7 +63,7 @@ const pop = keyframes`
 `;
 
 const _card = styled.div`
-	width: 95%;
+	width: 100%;
 	aspect-ratio: 4 / 1;
 	margin: min(2.5vw, 25px) auto;
 
@@ -104,8 +73,8 @@ const _card = styled.div`
 	position: relative;
 
 	${style_default_border}
-	border-radius: min(max(10px, 2vw), 20px);
-	${style_default_board_shadow}
+	border-width: 0px 0px 1px 0px;
+
 	background: rgba(255, 255, 255, 0.5) ${(props) => props.theme.style_gradient_blue};
 	animation: ${unbounce} .5s;
 	/* animation: ${debounce} .8s; */
