@@ -1,0 +1,25 @@
+{
+  "short_name": "Sugargenix",
+  "name": "Sugargenix LLC website, we make sweet games.",
+  "icons": [
+    {
+      "src": "favicon_recourse.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192_recourse.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512_recourse.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

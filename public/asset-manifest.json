@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/static/js/main.25ebe57b.js",
+    "static/media/background_hologram_recourse.webp": "/static/media/background_hologram_recourse.da5f1b76074d0d618c48.webp",
+    "static/media/team_kevin.gif": "/static/media/team_kevin.85ce228b10967dd57a7c.gif",
+    "static/media/banner_art.gif": "/static/media/banner_art.fc43855ecf5203d43c47.gif",
+    "static/media/logo_sugargenix_white.png": "/static/media/logo_sugargenix_white.47d1f0df8d9b4a8422c5.png",
+    "static/media/mympheus_title.png": "/static/media/mympheus_title.8eea60e3cc75dfdfa92f.png",
+    "index.html": "/index.html",
+    "static/media/logo_sugargenix.webp": "/static/media/logo_sugargenix.e3a39b5ca24c600267d8.webp",
+    "main.25ebe57b.js.map": "/static/js/main.25ebe57b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.25ebe57b.js"
+  ]
+}
