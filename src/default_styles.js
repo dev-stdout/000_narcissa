@@ -50,9 +50,6 @@ export const style_board_title = css`
 
 	font-size: min(calc(14px + 2.2vw), 36px);
 
-	border-bottom: 1px solid ${(props) => props.theme.style_accent_color};
-
-	width: 75%;
 	align-self: center;
 	margin: 0px 0px 5px;
 `;

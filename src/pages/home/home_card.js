@@ -1,28 +1,92 @@
 import { keyframes } from "styled-components";
-import { styled, style_default_board_shadow, style_default_border, style_text_base, style_board_title } from "../../default_styles";
+import { styled, style_default_border, style_text_base, style_board_title, style_text_default, style_border_base } from "../../default_styles";
+
+import border_dashed from "../../assets/border_dashed.svg"
 
 export const E_news_card = ({ href }) => {
 	return (
 		<a style={{textDecoration: "none"}} href={href}>
 			<_card>
 				<_card_left>
-					<_card_title>Website Unveiled!</_card_title>
-					<_card_text>We are thrilled to introduce Sugargenix, a game studio company, and welcome you to our first post out of many to come!</_card_text>
+					<_card_title>Title of the bounty, this is the title, this is the title.</_card_title>
+					<_dots></_dots>
 				</_card_left>
+				<_card_right>
+					<_bounty_cost>
+						<_special_font cost_color="yellow">5</_special_font>AVAX
+					</_bounty_cost>
+					<_dots></_dots>
+					<_bounty_status>unclaimed</_bounty_status>
+					<_dots></_dots>
+					<_bounty_date>Feb 25th, 2022</_bounty_date>
+				</_card_right>
 			</_card>
 		</a>
 	);
 };
 
-const _special_text_style = styled.em`
-	font-size: min(calc(4px + 1.3vw), 18px);
+const _special_font = styled.div`
+	color: ${(props) => props.cost_color};
+	font-family: ${style_text_default};
+	font-family: Saira;
 
-	background: ${(props) => props.theme.style_accent_color};
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	/* font-style: normal; */
-	-webkit-text-stroke: .2px white;
+	font-weight: 700;
+	font-size: 36px;
+
+	-webkit-text-fill-color: orange;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: blue;
+`
+const _bounty_cost = styled.div`
+	/* font-size: min(calc(4px + 1.3vw), 18px); */
+	font-family: ${style_text_base};
+	font-weight: bold;
+	font-size: 24px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	width: 30%;
+	`
+const _bounty_status = styled.div`
+	width: 120px;
+	aspect-ratio: 5/2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: cyan;
+
+	${style_default_border}
+	position: relative;
+
+	::before {
+		content: "";
+		${style_default_border}
+		position: absolute;
+		top: -10px;
+		left: 10px;
+		background: purple;
+
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	};
+`
+const _bounty_date = styled.div`
+	display: flex;
+	align-items: center;
+
+	${style_text_base}
+	/* border: 1px solid red; */
+`
+
+const _dots = styled.div`
+	width: 30px;
+	height: 0px;
+
+	border-style: dotted;
+	border-width: 2px;
 `
 
 const shake = keyframes`
@@ -64,18 +128,14 @@ const pop = keyframes`
 
 const _card = styled.div`
 	width: 100%;
-	aspect-ratio: 4 / 1;
-	margin: min(2.5vw, 25px) auto;
-
-	/* margin-left: ${(props) => (props.index % 2 == 1 ? "5%" : "0%")}; */
-
 	display: flex;
-	position: relative;
 
 	${style_default_border}
 	border-width: 0px 0px 1px 0px;
+	border-bottom-color: ${(props) => props.theme.style_neutral_light_color};
+	padding: 20px 40px;
 
-	background: rgba(255, 255, 255, 0.5) ${(props) => props.theme.style_gradient_blue};
+	background: transparent;
 	animation: ${unbounce} .5s;
 	/* animation: ${debounce} .8s; */
 
@@ -86,21 +146,26 @@ const _card = styled.div`
 		transform: scale(1.03);
 		filter: drop-shadow(-4px 7px 10px rgba(0, 0, 0, 0.6)) brightness(1.08);
 	}
-	padding: 6px;
 	box-sizing: border-box;
-	`;
+`;
 
 const _card_left = styled.div`
 	/* border: 1px solid red; */
-	width: 100%;
+	width: 45%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	align-items: center;
 	`;
 
 const _card_right = styled.div`
+	width: 60%;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: end;
 	/* border: 1px solid blue; */
-	flex: auto;
-	`;
+`;
 
 const _card_title = styled.div`
 	/* ${style_text_base} */

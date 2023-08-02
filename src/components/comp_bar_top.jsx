@@ -29,7 +29,7 @@ const _bar = styled.div`
 	display: flex;
 	align-items: end;
 
-	padding: 2px 10px 0px 20vw;
+	padding: 2px 10px 0px 10vw;
 
 	gap: 30px;
 

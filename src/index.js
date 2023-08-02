@@ -10,7 +10,7 @@ import { E_bounty_page } from "./pages/bounties/bounty_template";
 
 WebFont.load({
 	google: {
-		families: ["Source Code Pro:400"],
+		families: ["Source Code Pro", "Saira:700"],
 	},
 });
 

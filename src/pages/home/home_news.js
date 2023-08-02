@@ -1,12 +1,11 @@
-import { S_board_column, S_board_title } from "../../default_styles";
+import { styled, S_board_title } from "../../default_styles";
 
 import { E_news_card } from "./home_card";
 
 export const _news_board = ({}) => {
 	return (
-		<S_board_column>
-			<S_board_title>List of answers</S_board_title>
-			<div style={{ width: "85%", margin: "auto" }}>
+		<_bounty_list>
+			<S_board_title>Bounty List</S_board_title>
 				<E_news_card href={"news/001"}></E_news_card>
 				<E_news_card href={"news/001"}></E_news_card>
 				<E_news_card href={"news/001"}></E_news_card>
@@ -23,7 +22,13 @@ export const _news_board = ({}) => {
 				<E_news_card href={"news/001"}></E_news_card>
 				<E_news_card href={"news/001"}></E_news_card>
 				<E_news_card href={"news/001"}></E_news_card>
-			</div>
-		</S_board_column>
+		</_bounty_list>
 	);
 };
+
+export const _bounty_list = styled.div`
+	width: 80%;
+	/* border: 1px solid blue; */
+	padding: 0px;
+	margin-top: 40px;
+`
